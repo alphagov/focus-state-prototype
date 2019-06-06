@@ -5,7 +5,7 @@
 .app-step-nav-header {
   position: relative;
   padding: 10px;
-  background: govuk-colour("grey-4");
+  background: govuk-colour("light-grey");
   border-top: solid 1px $govuk-border-colour;
   border-bottom: solid 1px $govuk-border-colour;
   @include govuk-media-query($from: tablet) {
@@ -14,13 +14,12 @@
 }
 
 .app-step-nav-header__part-of {
-  @include govuk-font(16, $weight: bold)
-  display: block;
+  @include govuk-font(16, $weight: bold) display: block;
   padding-bottom: 0.2em;
 }
 
 .app-step-nav-header__title {
-  @include govuk-font(24, $weight: bold)
+  @include govuk-font(24, $weight: bold);
 }
 
 .app-step-nav-related {
@@ -29,14 +28,12 @@
 }
 
 .app-step-nav-related__heading {
-  @include govuk-font(19, $weight: bold)
-  margin-top: 15px;
+  @include govuk-font(19, $weight: bold) margin-top: 15px;
   margin-bottom: 10px;
 }
 
 .app-step-nav-related__links {
-  @include govuk-font(16, $weight: bold)
-  margin: 0;
+  @include govuk-font(16, $weight: bold) margin: 0;
   padding: 0;
 }
 
@@ -44,8 +41,7 @@
   margin-bottom: 13px;
 
   .app-step-nav-related__heading {
-    @include govuk-font(19, $weight: bold)
-    margin-top: 20px;
+    @include govuk-font(19, $weight: bold) margin-top: 20px;
   }
 
   .app-step-nav-related__pretitle {
@@ -102,21 +98,18 @@
 }
 
 .app-step-nav__button--title {
-  @include govuk-font(19, $weight: bold)
-  display: inline-block;
+  @include govuk-font(19, $weight: bold) display: inline-block;
   padding: 0;
   text-align: left;
   color: govuk-colour("black");
 
   .app-step-nav--large & {
-    @include govuk-font(24, $weight: bold)
+    @include govuk-font(24, $weight: bold);
   }
-
 }
 
 .app-step-nav__button--controls {
-  @include govuk-font(14)
-  position: relative;
+  @include govuk-font(14) position: relative;
   z-index: 1; // this and relative position stops focus outline underlap with border of accordion
   padding: 0.5em 0;
   text-decoration: underline;
@@ -126,7 +119,7 @@
   }
 
   .app-step-nav--large & {
-    @include govuk-font(16)
+    @include govuk-font(16);
   }
 }
 
@@ -233,8 +226,7 @@
 }
 
 .app-step-nav__circle--number {
-  @include govuk-font(16, $weight: bold)
-  line-height: 23px;
+  @include govuk-font(16, $weight: bold) line-height: 23px;
   border: solid 2px $govuk-border-colour;
 }
 
@@ -246,8 +238,7 @@
 }
 
 .app-step-nav--large .app-step-nav__circle--number {
-  @include govuk-font(16, $weight: bold)
-  line-height: 23px;
+  @include govuk-font(16, $weight: bold) line-height: 23px;
 }
 
 @include govuk-media-query($from: tablet) {
@@ -264,8 +255,7 @@
 }
 
 .app-step-nav__circle--logic {
-  @include govuk-font(16, $weight: bold)
-  line-height: 28px;
+  @include govuk-font(16, $weight: bold) line-height: 28px;
 }
 @include govuk-media-query($from: tablet) {
   .app-step-nav__circle--logic {
@@ -275,8 +265,7 @@
 }
 
 .app-step-nav--large .app-step-nav__circle--logic {
-  @include govuk-font(16, $weight: bold)
-  line-height: 28px;
+  @include govuk-font(16, $weight: bold) line-height: 28px;
 }
 
 @include govuk-media-query($from: tablet) {
@@ -297,7 +286,7 @@
 
 .app-step-nav__header {
   padding: 15px 0;
-  border-top: solid 2px govuk-colour("grey-3");
+  border-top: solid 2px govuk-colour("light-grey");
 }
 
 .app-step-nav--active .app-step-nav__header {
@@ -320,8 +309,7 @@
 }
 
 .app-step-nav__title {
-  @include govuk-font(19, $weight: bold)
-  line-height: 1.4;
+  @include govuk-font(19, $weight: bold) line-height: 1.4;
   margin: 0;
 }
 
@@ -333,8 +321,7 @@
 }
 
 .app-step-nav--large .app-step-nav__title {
-  @include govuk-font(19, $weight: bold)
-  line-height: 1.4;
+  @include govuk-font(19, $weight: bold) line-height: 1.4;
 }
 
 @include govuk-media-query($from: tablet) {
@@ -345,15 +332,13 @@
 }
 
 .app-step-nav__toggle-link {
-  @include govuk-font(16)
-  line-height: 1.2;
+  @include govuk-font(16) line-height: 1.2;
   display: block;
   color: $govuk-link-colour;
 }
 
 .app-step-nav--large .app-step-nav__toggle-link {
-  @include govuk-font(16)
-  line-height: 1.2;
+  @include govuk-font(16) line-height: 1.2;
 }
 
 @include govuk-media-query($from: tablet) {
@@ -364,8 +349,7 @@
 }
 
 .app-step-nav__panel {
-  @include govuk-font(16)
-  line-height: 1.25;
+  @include govuk-font(16) line-height: 1.25;
   .js-enabled &.js-hidden {
     display: none;
   }
@@ -378,7 +362,7 @@
 }
 
 .app-step-nav--large .app-step-nav__panel {
-  @include govuk-font(19)
+  @include govuk-font(19);
 }
 
 .app-step-nav__heading,
@@ -429,7 +413,9 @@
   left: -45px;
 }
 @include govuk-media-query($from: tablet) {
-  .app-step-nav--large .app-step-nav__list--choice .app-step-nav__list-item--active:before {
+  .app-step-nav--large
+    .app-step-nav__list--choice
+    .app-step-nav__list-item--active:before {
     left: -80px;
   }
 }
@@ -491,7 +477,7 @@
 .app-step-nav__help {
   position: relative;
   padding: 15px 0;
-  border-top: solid 2px govuk-colour("grey-3");
+  border-top: solid 2px govuk-colour("light-grey");
 }
 
 .app-step-nav__help:after {
@@ -532,7 +518,7 @@
 .app-step-nav__substep {
   position: relative;
   padding-top: 15px;
-  border-top: solid 2px govuk-colour("grey-3");
+  border-top: solid 2px govuk-colour("light-grey");
 }
 
 .app-step-nav__substep:after {

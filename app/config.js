@@ -4,31 +4,31 @@
 
 module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
-  serviceName: 'Service name goes here',
+  serviceName: "Apply online for a UK passport",
 
   // Default port that prototype runs on
-  port: '3000',
+  port: "3000",
 
   // Enable or disable password protection on production
-  useAuth: 'true',
+  useAuth: "true",
 
   // Automatically stores form data, and send to all views
-  useAutoStoreData: 'true',
+  useAutoStoreData: "true",
 
   // Enable cookie-based session store (persists on restart)
   // Please note 4KB cookie limit per domain, cookies too large will silently be ignored
-  useCookieSessionStore: 'false',
+  useCookieSessionStore: "false",
 
   // Enable or disable built-in docs and examples.
-  useDocumentation: 'true',
+  useDocumentation: "true",
 
   // Force HTTP to redirect to HTTPS on production
-  useHttps: 'true',
+  useHttps: "true",
 
   // Cookie warning - update link to service's cookie page.
-  cookieText: 'GOV.UK uses cookies to make the site simpler. <a href="#">Find out more about cookies</a>',
+  cookieText:
+    'GOV.UK uses cookies to make the site simpler. <a href="#">Find out more about cookies</a>',
 
   // Enable or disable Browser Sync
-  useBrowserSync: 'true'
-
-}
+  useBrowserSync: "true"
+};

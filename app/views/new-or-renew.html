@@ -16,31 +16,35 @@
       <form class="form" action="/date-of-birth" method="post">
 
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+          {# <div class="govuk-form-group govuk-form-group--error"> #}
+          <fieldset class="govuk-fieldset" aria-describedby="is-new-conditional-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
               <h1 class="govuk-fieldset__heading">
         Have you had a UK passport before?
       </h1>
             </legend>
-
+            {# <span id="is-new-conditional-hint" class="govuk-error-message"> #}
+            {# <span id="is-new-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Select yes if you have had a UK passport before
+    </span> #}
             <div class="govuk-radios govuk-radios--conditional" data-module="radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
-                <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                <input class="govuk-radios__input" id="is-new-conditional-1" name="is-new" type="radio" value="yes" data-aria-controls="conditional-is-new-conditional-1">
+                <label class="govuk-label govuk-radios__label" for="is-new-conditional-1">
           Yes
         </label>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
-                <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                <input class="govuk-radios__input" id="is-new-conditional-2" name="is-new" type="radio" value="no" data-aria-controls="conditional-is-new-conditional-2">
+                <label class="govuk-label govuk-radios__label" for="is-new-conditional-2">
           No
         </label>
               </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-is-new-conditional-2">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="contact-by-phone">
-You may need to have a passport interview. We’ll tell you if that happens and what you need to do.
+You may need to have a <a href="https://www.passport.service.gov.uk/help/identity-interviews">passport interview</a>. We’ll tell you if that happens and what you need to do.
 
           </label>
                 </div>

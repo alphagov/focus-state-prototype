@@ -31,6 +31,20 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
+            Have you had a UK passport before?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [Answer]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden">have a uk passport</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
@@ -59,10 +73,24 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Is your passport damaged
+            Is your passport damaged?
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>[Answer]</p>
+            <p>{{ data['more-detail'] }}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden">passport damage</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Lost or stolen?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{ data['is-lost'] }}</p>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -75,7 +103,7 @@
 
       <p>By submitting this information you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
-      <form action="/summary" method="post" novalidate>
+      <form action="/summary-lost" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 

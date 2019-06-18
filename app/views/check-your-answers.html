@@ -20,12 +20,14 @@
             Are you applying from the UK?
           </dt>
           <dd class="govuk-summary-list__value">
-            [Answer]
+            {{ data['is-applying-uk'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/apply-from-uk">
               Change
-              <span class="govuk-visually-hidden">applying frorm the Uk</span>
+              <span class="govuk-visually-hidden">
+                {{ data['is-applying-uk'] }}
+              </span>
             </a>
           </dd>
         </div>
@@ -34,12 +36,15 @@
             Have you had a UK passport before?
           </dt>
           <dd class="govuk-summary-list__value">
-            [Answer]
+            {{ data['is-new'] }}
+
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/new-or-renew">
               Change
-              <span class="govuk-visually-hidden">have a uk passport</span>
+              <span class="govuk-visually-hidden">
+                {{ data['is-new'] }}
+              </span>
             </a>
           </dd>
         </div>
@@ -48,12 +53,14 @@
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-            [Answer]
+            {{ data['date-of-birth-day'] }}
+            {{ data['date-of-birth-month'] }}
+            {{ data['date-of-birth-year'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/date-of-birth">
               Change
-              <span class="govuk-visually-hidden"> date of birth</span>
+              <span class="govuk-visually-hidden">date of birth</span>
             </a>
           </dd>
         </div>
@@ -62,10 +69,12 @@
             When was the passport issued?
           </dt>
           <dd class="govuk-summary-list__value">
-           [Answer]
+            {{ data['passport-issued-day'] }}
+            {{ data['passport-issued-month'] }}
+            {{ data['passport-issued-year'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/issue-date">
               Change
               <span class="govuk-visually-hidden">issue date</span>
             </a>
@@ -76,10 +85,11 @@
             Is your passport damaged?
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>{{ data['more-detail'] }}</p>
+            {{ data['is-damaged'] }}
+            {{ data['passport-damage-details'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/damaged">
               Change
               <span class="govuk-visually-hidden">passport damage</span>
             </a>
@@ -93,9 +103,23 @@
             <p>{{ data['is-lost'] }}</p>
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/lost-or-stolen">
               Change
-              <span class="govuk-visually-hidden">passport damage</span>
+              <span class="govuk-visually-hidden">lost of stolen</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you have any passports from other countries?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['has-other-passport'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/other-countries">
+              Change
+              <span class="govuk-visually-hidden"></span>
             </a>
           </dd>
         </div>

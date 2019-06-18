@@ -25,23 +25,23 @@
 
             <div class="govuk-radios govuk-radios--conditional" data-module="radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="is-damaged-conditional-1" name="is-damaged" type="radio" value="yes" data-aria-controls="conditional-is-damaged-conditional-1">
+                <input class="govuk-radios__input" id="is-damaged-conditional-1" name="is-damaged" type="radio" value="Yes" {{ checked("is-damaged", "Yes") }} data-aria-controls="conditional-is-damaged-conditional-1">
                 <label class="govuk-label govuk-radios__label" for="is-damaged-conditional-1">
           Yes
         </label>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-is-damaged-conditional-1">
                 <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-email">
+                  <label class="govuk-label" for="passport-damage-details">
             How was the passport damaged?
 
           </label>
-                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" {{ data['more-detail'] }}></textarea>
+                  <textarea class="govuk-textarea" id="passport-damage-details" name="passport-damage-details" rows="5" aria-describedby="passport-damage-details" value="{{ data['passport-damage-details'] }}">{{ data['passport-damage-details'] }}</textarea>
                 </div>
 
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="is-damaged-conditional-2" name="is-damaged" type="radio" value="no" data-aria-controls="conditional-is-damaged-conditional-2">
+                <input class="govuk-radios__input" id="is-damaged-conditional-2" name="is-damaged" type="radio" value="No" {{ checked("is-damaged", "No") }}  data-aria-controls="conditional-is-damaged-conditional-2">
                 <label class="govuk-label govuk-radios__label" for="is-damaged-conditional-2">
           No
         </label>

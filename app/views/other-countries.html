@@ -25,13 +25,13 @@
             <span id="has-other-passport-hint" class="govuk-hint"></span>
             <div class="govuk-radios govuk-radios--inline">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="has-other-passport-1" name="has-other-passport" type="radio" value="yes">
+                <input class="govuk-radios__input" id="has-other-passport-1" name="has-other-passport" type="radio" value="Yes" {{ checked("has-other-passport", "Yes") }}>
                 <label class="govuk-label govuk-radios__label" for="has-other-passport-1">
           Yes
         </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="has-other-passport-2" name="has-other-passport" type="radio" value="no">
+                <input class="govuk-radios__input" id="has-other-passport-2" name="has-other-passport" type="radio" value="No" {{ checked("has-other-passport", "No") }}>
                 <label class="govuk-label govuk-radios__label" for="has-other-passport-2">
           No
         </label>

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+          Apply for a first UK passport
+      </h1>
+
+      <p>Based on your answers, you’re applying for a first, adult passport.</p>
+
+      <p>You need to have <a href="https://www.gov.uk/types-of-british-nationality?_ga=2.88146973.702084347.1560867014-874947529.1509373301">British nationality</a> to get a UK passport. Check you’re eligible before you apply.</p>
+      <p>It should take around 6 weeks to get a new passport.</p>
+      <a href="https://www.passport.service.gov.uk/apply/how-to-apply" role="button" draggable="false" class="govuk-button">
+Continue</a>
+    </div>
+  </div>
+
+{% endblock %}

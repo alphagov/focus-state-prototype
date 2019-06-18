@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Apply for a UK passport
+
+      </h1>
+
+      <p>Based on your answers, you’re applying for a replacement, adult passport.</p>
+
+      <p>If you want to change the name on this passport, we’ll ask for the details later on.</p>
+      <p>It should take 3 weeks to get a new passport. Use the 1 week Fast Track service if you need to <a href="https://www.gov.uk/get-a-passport-urgently?_ga=2.155649981.702084347.1560867014-874947529.1509373301">get a passport urgently</a>.</p>
+      <a href="https://www.passport.service.gov.uk/apply/how-to-apply" role="button" draggable="false" class="govuk-button">
+Continue</a>
+    </div>
+  </div>
+
+{% endblock %}

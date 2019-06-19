@@ -79,24 +79,6 @@ $govuk-global-styles: true;
 .govuk-button.apply-button,
 .govuk-button.digital-guidance-button {
   background-color: #fff;
-  position: relative;
-  display: -moz-inline-stack;
-  display: inline-block;
-  padding: 0.526315em 0.789473em 0.263157em;
-  border: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -webkit-appearance: none;
-  -webkit-box-shadow: 0 2px 0 #d9d9d9;
-  -moz-box-shadow: 0 2px 0 #d9d9d9;
-  box-shadow: 0 2px 0 #d9d9d9;
-  font-size: 1em;
-  line-height: 1.25;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
-  color: #0b0c0c;
   font-weight: 700;
   color: #005ea5;
   -webkit-box-shadow: 0 2px 0 #001526;

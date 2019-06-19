@@ -31,15 +31,12 @@ $govuk-global-styles: true;
 
   & .govuk-heading-xl,
   .govuk-heading-m,
-  .flash-card.govuk-details__summary-text {
-    color: #fff;
+  .flash-card {
+    color: #fff !important;
   }
 }
-.flash-card.govuk-details__summary {
-  color: #fff;
-}
 
-.flash-card.govuk-details__summary:hover {
+.flash-card .govuk-details__summary:hover {
   color: #fff;
 }
 
@@ -173,4 +170,8 @@ $govuk-global-styles: true;
   background-position: left 0 top 6px;
   background-size: 22px;
   font-size: 16px;
+}
+
+.white {
+  color: #fff;
 }

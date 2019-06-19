@@ -31,15 +31,15 @@ $govuk-global-styles: true;
 
   & .govuk-heading-xl,
   .govuk-heading-m,
-  .govuk-details__summary-text {
+  .flash-card.govuk-details__summary-text {
     color: #fff;
   }
 }
-.govuk-details__summary {
+.flash-card.govuk-details__summary {
   color: #fff;
 }
 
-.govuk-details__summary:hover {
+.flash-card.govuk-details__summary:hover {
   color: #fff;
 }
 
@@ -69,7 +69,7 @@ $govuk-global-styles: true;
 
 .how-to-apply p,
 .apply-button,
-.govuk-details {
+.flash-card.govuk-details {
   color: #fff;
   margin-left: 32px;
 }
@@ -109,4 +109,68 @@ $govuk-global-styles: true;
   & :hover {
     background-color: #f2f2f2;
   }
+}
+
+.digital-photo-guidance > .govuk-inset-text {
+  border-left-color: #fff;
+}
+
+.photo-guide-photos ul {
+  display: flex;
+  overflow: hidden;
+  margin-left: -8px;
+}
+
+.photo-guide-photos ul li {
+  flex: 1;
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+  margin-bottom: 1.05263em;
+  padding-left: 8px;
+}
+
+.photo-guide-photos img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.large {
+  width: 50%;
+  margin-bottom: 1.05263em;
+}
+
+.photo-guide-photos {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.photo-guide-photos .result .approved,
+.guidance-photos .result .approved {
+  background-image: url(https://www.passport.service.gov.uk/public/images/photo/icon-thick-tick.svg);
+  background-repeat: no-repeat;
+  padding-left: 30px;
+}
+
+.photo-guide-photos .result .failed,
+.guidance-photos .result .failed {
+  background-image: url(https://www.passport.service.gov.uk/public/images/photo/icon-thick-cross.svg);
+  background-repeat: no-repeat;
+  padding-left: 30px;
+}
+
+.photo-guide-photos .result {
+  display: flex;
+  font-size: 16px;
+  width: 100%;
+}
+
+.photo-guide-photos .result .approved,
+.photo-guide-photos .result .failed {
+  width: 100%;
+  padding: 8px 0 8px 30px;
+  background-position: left 0 top 6px;
+  background-size: 22px;
+  font-size: 16px;
 }

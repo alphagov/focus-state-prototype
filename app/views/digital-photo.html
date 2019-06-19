@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <form action="/apply/how-to-apply" method="POST" autocomplete="off" novalidate="true" spellcheck="false">
+        <div class="flash-card">
+          <header>
+            <h1 class="govuk-heading-xl">
+                  How to get a digital passport photo
+              </h1>
+          </header>
+
+          <div class="govuk-grid-row" data-id="how-to-apply">
+            <div class="govuk-grid-column-two-thirds digital-photo-guidance">
+              <p>There are 3 ways:</p>
+              <h2 class="govuk-heading-m">Photos taken at home</h2>
+              <p>You’ll need someone to help you and a device that takes digital photos.</p>
+
+              <h2 class="govuk-heading-m">Photo with code</h2>
+              <p>Get your photo taken in a booth or shop, and get a code with your photo. 
+                Use the code to add the photo to your application.</p>
+
+              <h2 class="govuk-heading-m">Photo in a digital file</h2>
+              <p>Get your photo taken in a shop and get a digital file of your photo. 
+                Upload the file to add the photo to your application.</p>
+
+              <div class="form-group">
+                <button type="submit" class="govuk-button digital-guidance-button">
+                Continue
+              </button>
+                <input type="hidden" name="x-csrf-token" value="PE1ksI3d-HtqrwqI5vN4shypp1zbqsa4jpyw">
+              </div>
+
+              <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                  I need help doing things online    
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                You can call the Passport Adviceline and ask for help
+
+                <br>Telephone: +44 (0) 300 330 0901
+                <br>Textphone: +44 (0) 300 330 0808
+                <br>Monday to Friday, 8:00am to 8:00pm (UK time)
+                <br>Weekends and public holidays, 9:00am to 5:30pm (UK time)
+
+                <br>Find out about call charges  
+                </div>
+              </details>
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+              <img src="/public/images/digital-photo.png" alt="smartphone-image" width="250">
+            </div>
+
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

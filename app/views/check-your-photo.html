@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Check your photo
+      </h1>
+
+      <ol class="govuk-list govuk-list--number">
+        <li class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold" style="margin:25px 0">Background and lighting</li>
+        <p>Your photo must have:</p>
+        <ul class="govuk-list--bullet">
+          <li>a plain light-coloured background – without texture or pattern</li>
+          <li>balanced light – no shadows on your face or behind you</li>
+          <li>no objects behind you</li>
+        </ul>
+        <li class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold" style="margin:25px 0">Your appearance</li>
+        <p>Make sure:</p>
+        <ul class="govuk-list--bullet">
+          <li>the photo is a good likeness taken in the last month</li>
+          <li>your whole face is visible with your eyes open</li>
+          <li>you have a plain expression – no smile and mouth closed</li>
+          <li>there are no reflections or glare (if you have to wear glasses)</li>
+          <li>you’re not wearing headwear (unless for religious or medical reasons)</li>
+        </ul>
+        <li class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold" style="margin:25px 0">Photo quality and format</li>
+        <p>Your photo must:</p>
+        <ul class="govuk-list--bullet">
+          <li>be in colour, with no effects or filters</li>
+          <li>not be blurred or have ‘red eye’</li>
+          <li>be unedited – you can’t ‘correct’ your passport photo</li>
+        </ul>
+    </ol>
+
+    <div class="govuk-inset-text">
+    If your photo doesn’t meet the rules you may have problems with your application or when you travel.
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <h3 class="govuk-heading-m">Do you want to submit this photo?</h3>
+
+        </legend>
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+              Yes, I want to submit it</label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+          No, I want to get a different photo
+        </label>
+          </div>
+
+        </div>
+      </fieldset>
+    </div>
+
+    <form class="form" action="/old-passport-details" method="post">
+      <button type="submit" class="govuk-button">
+          Continue
+      </button>
+    </form>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <div class="photo-preview-inner">
+
+      <h3 class="govuk-heading-m">Your photo</h3>
+      <img src="/public/images/for-upload.jpg" alt="photo-image" width="200">
+    </div>
+  </div>
+</div>
+
+{% endblock %}

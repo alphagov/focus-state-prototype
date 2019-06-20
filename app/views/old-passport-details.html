@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Old passport details
+      </h1>
+      <div class="govuk-form-group">
+
+        <label class="govuk-label govuk-heading-m" for="event-name">
+          <h3 class="govuk-heading-m">
+ Passport number</h3>
+        </label>
+        <span id="event-name-hint" class="govuk-hint">
+For example, 502135326
+      </span>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+      </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="passport-issued-hint" role="group">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h3 class="govuk-heading-m">
+        Expiry date
+      </h3>
+          </legend>
+          <span id="passport-issued-hint" class="govuk-hint">
+      For example, 12 11 2007
+    </span>
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+               My passport is lost or stolen
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+            If you don’t have your old passport you must <a href="https://www.gov.uk/report-a-lost-or-stolen-passport?_ga=2.92342939.702084347.1560867014-874947529.1509373301">report it lost or stolen</a>.
+        </div>
+      </details>
+
+      <form class="form" action="/old-passport-details" method="post">
+        <button type="submit" class="govuk-button">
+          Continue
+      </button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

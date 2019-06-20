@@ -30,13 +30,14 @@
           Yes
         </label>
               </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-is-damaged-conditional-1">
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden govuk-character-count" data-module="govuk-character-count" data-maxlength="200" id="conditional-is-damaged-conditional-1">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="passport-damage-details">
             How was the passport damaged?
 
           </label>
-                  <textarea class="govuk-textarea" id="passport-damage-details" name="passport-damage-details" rows="5" aria-describedby="passport-damage-details" value="{{ data['passport-damage-details'] }}">{{ data['passport-damage-details'] }}</textarea>
+                  <textarea class="govuk-textarea govuk-js-character-count" id="passport-damage-details" name="passport-damage-details" rows="5" aria-describedby="passport-damage-details" value="{{ data['passport-damage-details'] }}">{{ data['passport-damage-details'] }}</textarea>
+
                 </div>
 
               </div>

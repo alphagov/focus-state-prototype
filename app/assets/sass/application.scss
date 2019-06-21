@@ -23,10 +23,13 @@ $govuk-global-styles: true;
   margin-top: 1.04167em;
   padding: 40px;
   background: #005ea5;
-  color: #fff;
   height: 100%;
   & header {
     padding-left: 40px;
+  }
+
+  .flash-card.govuk-details__summary:focus .govuk-details__summary-text {
+    color: #0b0c0c;
   }
 
   & .govuk-heading-xl,

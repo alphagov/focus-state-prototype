@@ -131,7 +131,20 @@
         Total amount:
         </p>
         <p>
-          <span id="amount" class="amount govuk-!-font-size-36 govuk-!-font-weight-bold">£</span></p>
+          <span id="amount" class="amount govuk-!-font-size-36 govuk-!-font-weight-bold">
+            {% if  data["select-passport-size"] == "£75.50" and  data["choose-delivery"] == "£5" %}
+            £80.50
+
+            {% elif data["select-passport-size"] == "£85.50" and  data["choose-delivery"] == "£5"   %}
+            £90.50
+
+          {% elif data["select-passport-size"] == "£85.50" and  data["choose-delivery"] == "Free"   %}
+            £85.50
+
+            {% else %}
+
+              £75.50
+          {% endif %}</span></p>
 
       </div>
     </div>

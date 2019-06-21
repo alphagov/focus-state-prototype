@@ -22,9 +22,9 @@
           <dt class="govuk-summary-list__key">
       New passport
        </dt>
-          <dd class="govuk-summary-list__value"></dd>
+          <dd class="govuk-summary-list__value">{{ data["select-passport-size"] }}</dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
+            <a class="govuk-link" href="/passport-size">
               Change<span class="govuk-visually-hidden"> delivery type</span>
             </a>
           </dd>
@@ -33,9 +33,9 @@
           <dt class="govuk-summary-list__key">
         Old passport
         </dt>
-          <dd class="govuk-summary-list__value"></dd>
+          <dd class="govuk-summary-list__value">{{ data["choose-delivery"] }}</dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
+            <a class="govuk-link" href="/return-delivery">
         Change<span class="govuk-visually-hidden"> return delivery type</span>
             </a>
           </dd>
@@ -44,7 +44,22 @@
           <dt class="govuk-summary-list__key">
         Total
         </dt>
-          <dd class="govuk-summary-list__value"></dd>
+          <dd class="govuk-summary-list__value">
+            {% if  data["select-passport-size"] == "£75.50" and  data["choose-delivery"] == "£5" %}
+            £80.50
+
+            {% elif data["select-passport-size"] == "£85.50" and  data["choose-delivery"] == "£5"   %}
+            £90.50
+
+          {% elif data["select-passport-size"] == "£85.50" and  data["choose-delivery"] == "Free"   %}
+            £85.50
+
+            {% else %}
+
+              £75.50
+          {% endif %}
+
+          </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
               <span class="govuk-visually-hidden">total cost</span>

@@ -162,3 +162,75 @@ $govuk-global-styles: true;
   border-top: 10px solid #005ea5;
   padding-top: 10px;
 }
+
+@media (min-width: 40.0625em) {
+  .accepted-cards {
+    width: 66.666%;
+  }
+}
+
+.accepted-cards {
+  display: block;
+  width: 100%;
+  margin: 15px 0 5px;
+  padding: 0;
+  float: none;
+  overflow: hidden;
+}
+
+.accepted-cards.field-empty .american-express,
+.accepted-cards .american-express.selected {
+  background-position: 25% 0%;
+}
+
+.accepted-cards.field-empty .visa,
+.accepted-cards .visa.selected {
+  background-position: 0% 0%;
+}
+.accepted-cards.field-empty .master-card,
+.accepted-cards .master-card.selected {
+  background-position: 12.5% 0%;
+}
+.accepted-cards.field-empty .unionpay,
+.accepted-cards .unionpay.selected {
+  background-position: 100% 0%;
+}
+
+.accepted-cards.field-empty .jcb,
+.accepted-cards .jcb.selected {
+  background-position: 37.5% 0%;
+}
+
+.accepted-cards.field-empty .discover,
+.accepted-cards .discover.selected {
+  background-position: 62.5% 0%;
+}
+
+.accepted-cards.field-empty .diners-club,
+.accepted-cards .diners-club.selected {
+  background-position: 50% 0%;
+}
+
+.accepted-cards li {
+  display: block;
+  width: 3rem;
+  height: 0;
+  margin: 0 10px 5px 0;
+  padding-bottom: 2rem;
+  float: left;
+  background-image: url(/public/images/accepted-cards-sprite.png);
+  background-size: 900% 200%;
+}
+
+.govuk-form-group.cvc .cvc {
+  float: left;
+  margin-right: 15px;
+}
+
+.govuk-form-group.cvc img {
+  position: relative;
+  top: -1px;
+  max-height: 38px;
+  float: left;
+  margin-right: 15px;
+}

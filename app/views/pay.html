@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Payment
+      </h1>
+
+      <div class="govuk-form-group card-no-group" data-validation="cardNo">
+        <label id="card-no-lbl" for="card-no" class="govuk-label govuk-label--s govuk-!-font-size-24 govuk-!-width-three-quarters">
+          <span class="card-no-label" data-label-replace="cardNo" data-original-label="Card number">
+                Card number
+              </span>
+        </label>
+        <input id="card-no" type="tel" name="cardNo" maxlength="26" class="govuk-input govuk-!-width-three-quarters" autocomplete="cc-number" value="">
+        <ul class="accepted-cards field-empty">
+          <li class="american-express" data-key="american-express" data-credit="true" data-debit="false">
+            <span class="govuk-warning-text__assistive">
+                    american-express
+                  </span>
+          </li>
+          <li class="visa" data-key="visa" data-credit="true" data-debit="true">
+            <span class="govuk-warning-text__assistive">
+                    visa
+                  </span>
+          </li>
+          <li class="master-card" data-key="master-card" data-credit="true" data-debit="true">
+            <span class="govuk-warning-text__assistive">
+                    master-card
+                  </span>
+          </li>
+          <li class="unionpay" data-key="unionpay" data-credit="true" data-debit="false">
+            <span class="govuk-warning-text__assistive">
+                    unionpay
+                  </span>
+          </li>
+          <li class="jcb" data-key="jcb" data-credit="true" data-debit="false">
+            <span class="govuk-warning-text__assistive">
+                    jcb
+                  </span>
+          </li>
+          <li class="discover" data-key="discover" data-credit="true" data-debit="false">
+            <span class="govuk-warning-text__assistive">
+                    discover
+                  </span>
+          </li>
+          <li class="diners-club" data-key="diners-club" data-credit="true" data-debit="false">
+            <span class="govuk-warning-text__assistive">
+                    diners-club
+                  </span>
+          </li>
+        </ul>
+
+        <span id="accepted-cards-hint" class="govuk-hint">
+            Accepted credit and debit card types
+          </span>
+      </div>
+
+      <div class="govuk-form-group govuk-clearfix govuk-!-margin-bottom-7  expiry-date" data-validation="expiryMonth">
+        <label class="govuk-label govuk-label--s govuk-!-font-size-24" id="expiry-date-lbl" for="expiry-month">
+          <span class="expiry-date-label" data-label-replace="expiryMonth" data-original-label="Expiry date">
+            Expiry date
+          </span>
+        </label>
+        <span class="govuk-hint govuk-!-margin-bottom-2">
+          For example, 10/20</span>
+        <div class="govuk-date-input__item govuk-date-input__item--month govuk-date-input__item--with-separator">
+          <label class="govuk-label govuk-date-input__label" for="expiry-month">Month</label>
+          <input id="expiry-month" type="number" name="expiryMonth" value="" class="govuk-input govuk-date-input__input govuk-input--width-3" min="1" max="12" minlength="1" maxlength="2" autocomplete="cc-exp-month">
+        </div>
+        <div class="govuk-date-input__item govuk-date-input__item--year">
+          <label for="expiry-year" class="govuk-label govuk-date-input__label">Year</label>
+          <input id="expiry-year" type="number" name="expiryYear" value="" minlength="2" maxlength="4" class="govuk-input govuk-date-input__input govuk-input--width-3" autocomplete="cc-exp-year" data-last-of-form-group="" data-required="">
+        </div>
+      </div>
+
+      <div class="govuk-form-group" data-validation="cardholderName">
+        <label id="cardholder-name-lbl" for="cardholder-name" class="govuk-label govuk-label--s govuk-!-font-size-24">
+          <span data-label-replace="cardholderName" data-original-label="Name on card" class="card-holder-name-label">
+                Name on card
+              </span>
+        </label>
+        <input id="cardholder-name" type="text" name="cardholderName" maxlength="200" class="govuk-input govuk-!-width-three-quarters" value="" autocomplete="cc-name">
+      </div>
+
+      <div class="govuk-form-group cvc govuk-clearfix" data-validation="cvc">
+        <label id="cvc-lbl" for="cvc" class="govuk-label govuk-label--s govuk-!-font-size-24">
+          <span class="cvc-label" data-label-replace="cvc" data-original-label="Card security code">
+            Card security code
+          </span>
+          <span class="govuk-hint govuk-!-margin-bottom-2">
+            <span class="generic-cvc">
+              The last 3 digits on the back of the card
+            </span>
+          </span>
+        </label>
+        <input id="cvc" type="number" value="" name="cvc" class="govuk-input govuk-input--width-3 cvc" maxlength="4" autocomplete="cc-csc">
+        <img src="/public/images/security-code.png" class="generic-cvc" alt="The last 3 digits on the back of the card">
+
+      </div>
+
+      <form class="form" action="/confirmation" method="post">
+        <button type="submit" class="govuk-button">
+          Confirm
+      </button>
+      </form>
+
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        <a class="govuk-link" href="">Cancel</a>
+
+      </p>
+    </div>
+
+    <div class="govuk-grid-column-one-third payment-summary-wrap">
+      <div class="photo-preview-inner">
+
+        <h2 class="govuk-heading-m">Payment summary</h2>
+
+        <p class="govuk-body govuk-!-margin-bottom-0">
+        Total amount:
+        </p>
+        <p>
+          <span id="amount" class="amount govuk-!-font-size-36 govuk-!-font-weight-bold">£</span></p>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

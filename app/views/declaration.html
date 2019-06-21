@@ -14,14 +14,49 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Heading goes here
+        Declaration
       </h1>
 
-      <p>This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.</p>
+      <p>By continuing you confirm that:</p>
 
-      <p>This paragraph has a link to <a href="/url/of/onward/page">find out more about this subject</a>.</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the information you’ve given is correct</li>
+        <li>you agree to the <a href="https://www.passport.service.gov.uk/help/terms-and-conditions">terms and conditions</a>
+        </li>
+        <li>HM Passport Office will record, store, use and share your data in accordance with our <a href="https://www.passport.service.gov.uk/help/privacy">privacy policy</a>
+        </li>
+      </ul>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+             If you give untrue or misleading information to get a passport you could be prosecuted.
+          </strong>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="agree-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl"></legend>
+
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="agree-1" name="agree" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="agree-1">
+            I agree
+        </label>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <form class="form" action="/pay" method="post">
+          <button type="submit" class="govuk-button">
+          Continue to payment
+      </button>
+        </form>
+      </div>
 
     </div>
-  </div>
 
-{% endblock %}
+  {% endblock %}

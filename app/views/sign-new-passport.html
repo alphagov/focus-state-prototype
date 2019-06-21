@@ -14,13 +14,45 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Heading goes here
+        Signing a new passport
       </h1>
 
-      <p>This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.</p>
+      <p>All passport holders ages 12 and older must sign the new passport when they receive it.</p>
 
-      <p>This paragraph has a link to <a href="/url/of/onward/page">find out more about this subject</a>.</p>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m"></legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="will-sign-1" name="will-sign" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="will-sign-1">
+              I understand and will sign my passport</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="will-sign-2" name="will-sign" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="will-sign-2">
+          I can't sign my name
+        </label>
+            </div>
 
+          </div>
+        </fieldset>
+      </div>
+
+      <form class="form" action="/docs-to-send" method="post">
+        <button type="submit" class="govuk-button">
+          Continue
+      </button>
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="photo-preview-inner">
+
+        <h3 class="govuk-heading-m">Where to sign</h3>
+        <img src="https://www.passport.service.gov.uk/apply/public/images/where-to-sign-x2.png" alt="where to sign" width="200">
+      </div>
     </div>
   </div>
 

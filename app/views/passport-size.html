@@ -14,13 +14,56 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Heading goes here
+        New passport
       </h1>
 
-      <p>This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.</p>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Passport size
 
-      <p>This paragraph has a link to <a href="/url/of/onward/page">find out more about this subject</a>.</p>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="select-passport-size-1" name="select-passport-size" type="radio" value="standard">
+              <label class="govuk-label govuk-radios__label" for="select-passport-size-1">
+              Standard 34-page passport(£75.50)</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="select-passport-size-2" name="select-passport-size" type="radio" value="frequent">
+              <label class="govuk-label govuk-radios__label" for="select-passport-size-2">
+          Frequent traveller 50-page passport(£85.50)
+        </label>
+            </div>
 
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl"></legend>
+          <p>If you're blind or visually impaired, we can add a braille sticker that reads passport, 
+            your name and passport expiry date.    
+          </p>
+
+          <span id="braille-hint" class="govuk-hint"></span>
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="braille-1" name="braille" type="checkbox" value="yes">
+              <label class="govuk-label govuk-checkboxes__label" for="braille-1">
+              I need a braille sticker
+        </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+      <form class="form" action="/sign-new-passport" method="post">
+        <button type="submit" class="govuk-button">
+          Continue
+      </button>
+      </form>
     </div>
   </div>
 

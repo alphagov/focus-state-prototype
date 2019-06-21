@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        How should we return your documents?
+      </h1>
+
+      <p>Choose how your old passport and any extra documents are sent back to you. They won’t be in the same envelope as your new passport.</p>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m"></legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="choose-delivery-1" name="choose-delivery" type="radio" value="secure">
+              <label class="govuk-label govuk-radios__label" for="choose-delivery-1">
+              Secure delivery (£5 extra)</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="choose-delivery-2" name="choose-delivery" type="radio" value="standard">
+              <label class="govuk-label govuk-radios__label" for="choose-delivery-2">
+          Standard post (free)
+        </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+      <div class="govuk-inset-text">
+          We’ll send your new passport by secure delivery at no extra cost.
+    </div>
+
+      <form class="form" action="/cost" method="post">
+        <button type="submit" class="govuk-button">
+          Continue
+      </button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        What you need to send
+      </h1>
+
+      <div class="govuk-inset-text">
+        You must send original documents - we can’t accept photocopies. Your application will be delayed if 
+        you don’t send everything we need.
+    </div>
+
+      <h2 class="govuk-heading-m">Applicant's documents</h2>
+
+      <h3 class="govuk-heading-s">Send the following:</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>old passport</li>
+
+      </ul>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+      <p>If any of the following apply, you need to send <a href="https://www.passport.service.gov.uk/help/additional-documents-guidance">additional documents</a>:
+</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>include a professional, or other title on your passport</li>
+        <li>apply for a British National Overseas (BNO) passport</li>
+        <li>apply for a British Protected Person passport</li>
+        <li>change your gender on your passport</li>
+        <li>renew a passport that was issued for 1 year or less</li>
+        <li>change British nationality status in your passport to British citizen</li>
+
+      </ul>
+
+      <form class="form" action="/passport-delivery" method="post">
+        <button type="submit" class="govuk-button">
+          Continue
+      </button>
+      </form>
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+      My documents aren’t in English or Welsh
+    </span>
+        </summary>
+        <div class="govuk-details__text">
+  If your documents aren’t in English or Welsh you’ll need to get a <a href="https://www.gov.uk/certifying-a-document?_ga=2.159846203.702084347.1560867014-874947529.1509373301">certified translation</a>.
+
+  </div>
+      </details>
+
+    </div>
+  </div>
+
+{% endblock %}

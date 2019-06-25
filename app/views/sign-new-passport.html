@@ -18,28 +18,28 @@
       </h1>
 
       <p>All passport holders ages 12 and older must sign the new passport when they receive it.</p>
+      <form class="form" action="/docs-to-send" method="post">
 
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m"></legend>
-          <div class="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="will-sign-1" name="will-sign" type="radio" value="yes">
-              <label class="govuk-label govuk-radios__label" for="will-sign-1">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m"></legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="will-sign-1" name="will-sign" type="radio" value="yes" {{ checked("will-sign", "yes") }}>
+                <label class="govuk-label govuk-radios__label" for="will-sign-1">
               I understand and will sign my passport</label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="will-sign-2" name="will-sign" type="radio" value="no">
-              <label class="govuk-label govuk-radios__label" for="will-sign-2">
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="will-sign-2" name="will-sign" type="radio" value="no" {{ checked("will-sign", "no") }}>
+                <label class="govuk-label govuk-radios__label" for="will-sign-2">
           I can't sign my name
         </label>
+              </div>
+
             </div>
+          </fieldset>
+        </div>
 
-          </div>
-        </fieldset>
-      </div>
-
-      <form class="form" action="/docs-to-send" method="post">
         <button type="submit" class="govuk-button">
           Continue
       </button>

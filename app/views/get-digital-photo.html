@@ -24,13 +24,13 @@
             </legend>
             <div class="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="get-photo-1" name="get-photo" type="radio" value="digital photo">
+                <input class="govuk-radios__input" id="get-photo-1" name="get-photo" type="radio" value="digital-photo" {{ checked("get-photo", "digital-photo") }}>
                 <label class="govuk-label govuk-radios__label" for="get-photo-1">
           I'll take or upload a digital photo
         </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="get-photo-2" name="get-photo" type="radio" value="enter code">
+                <input class="govuk-radios__input" id="get-photo-2" name="get-photo" type="radio" value="enter-code" {{ checked("get-photo", "enter-code") }}>
                 <label class="govuk-label govuk-radios__label" for="get-photo-2">
           I have a code to enter
         </label>

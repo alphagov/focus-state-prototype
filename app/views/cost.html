@@ -51,13 +51,17 @@
             {% elif data["select-passport-size"] == "£85.50" and  data["choose-delivery"] == "£5"   %}
             £90.50
 
-          {% elif data["select-passport-size"] == "£85.50" and  data["choose-delivery"] == "Free"   %}
+            {% elif data["select-passport-size"] == "£85.50" and  data["choose-delivery"] == "Free"   %}
             £85.50
+
+            {% elif data["select-passport-size"] == "£75.50" and  data["choose-delivery"] == "Free" %}
+
+            £75.50
 
             {% else %}
 
-              £75.50
-          {% endif %}
+              £0
+            {% endif %}
 
           </dd>
           <dd class="govuk-summary-list__actions">

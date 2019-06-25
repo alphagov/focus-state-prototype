@@ -18,28 +18,28 @@
       </h1>
 
       <p>For example a maiden name, a previous married name or a name you were given at birth and changed later. You must tell us every name you’ve used.</p>
+      <form class="form" action="/place-of-birth" method="post">
 
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl"></legend>
-          <div class="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="used-other-names-1" name="used-other-names" type="radio" value="yes">
-              <label class="govuk-label govuk-radios__label" for="used-other-names-1">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl"></legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="used-other-names-1" name="used-other-names" type="radio" value="yes" {{ checked("used-other-names", "yes") }}>
+                <label class="govuk-label govuk-radios__label" for="used-other-names-1">
               Yes</label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="used-other-names-2" name="used-other-names" type="radio" value="no">
-              <label class="govuk-label govuk-radios__label" for="used-other-names-2">
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="used-other-names-2" name="used-other-names" type="radio" value="no" {{ checked("used-other-names", "no") }}>
+                <label class="govuk-label govuk-radios__label" for="used-other-names-2">
           No
         </label>
+              </div>
+
             </div>
+          </fieldset>
+        </div>
 
-          </div>
-        </fieldset>
-      </div>
-
-      <form class="form" action="/place-of-birth" method="post">
         <button type="submit" class="govuk-button">
           Continue
       </button>

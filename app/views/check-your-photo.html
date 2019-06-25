@@ -46,31 +46,31 @@
     <div class="govuk-inset-text">
     If your photo doesn’t meet the rules you may have problems with your application or when you travel.
     </div>
+    <form class="form" action="/old-passport-details" method="post">
 
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-          <h3 class="govuk-heading-m">Do you want to submit this photo?</h3>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h3 class="govuk-heading-m">Do you want to submit this photo?</h3>
 
-        </legend>
-        <div class="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="submit-photo-1" name="submit-photo" type="radio" value="england">
-            <label class="govuk-label govuk-radios__label" for="submit-photo-1">
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="submit-photo-1" name="submit-photo" type="radio" value="yes" {{ checked("submit-photo", "yes") }}>
+              <label class="govuk-label govuk-radios__label" for="submit-photo-1">
               Yes, I want to submit it</label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="submit-photo-2" name="submit-photo" type="radio" value="scotland">
-            <label class="govuk-label govuk-radios__label" for="submit-photo-2">
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="submit-photo-2" name="submit-photo" type="radio" value="no" {{ checked("submit-photo", "no") }}>
+              <label class="govuk-label govuk-radios__label" for="submit-photo-2">
           No, I want to get a different photo
         </label>
+            </div>
+
           </div>
+        </fieldset>
+      </div>
 
-        </div>
-      </fieldset>
-    </div>
-
-    <form class="form" action="/old-passport-details" method="post">
       <button type="submit" class="govuk-button">
           Continue
       </button>

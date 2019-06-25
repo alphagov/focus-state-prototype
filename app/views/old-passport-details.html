@@ -30,38 +30,38 @@ For example, 502135326
           <input class="govuk-input govuk-input--width-20" id="width-20" name="passport-number" value="{{ data['passport-number'] }}" {{ data['passport-number'] }} type="text">
         </div>
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="passport-issued-hint" role="group">
+          <fieldset class="govuk-fieldset" aria-describedby="expiry-date-hint" role="group">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
               <h3 class="govuk-heading-m">
         Expiry date
       </h3>
             </legend>
-            <span id="passport-issued-hint" class="govuk-hint">
+            <span id="expiry-date-hint" class="govuk-hint">
       For example, 12 11 2007
     </span>
-            <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input" id="expiry-date">
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  <label class="govuk-label govuk-date-input__label" for="expiry-date-day">
             Day
           </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" value="{{ data['passport-issued-day'] }}" {{ data['passport-issued-day'] }} type="number" pattern="[0-9]*">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expiry-date-day" name="expiry-date-day" value="{{ data['expiry-date-day'] }}" {{ data['expiry-date-day'] }} type="number" pattern="[0-9]*">
                 </div>
               </div>
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  <label class="govuk-label govuk-date-input__label" for="expiry-date-month">
             Month
           </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" value="{{ data['passport-issued-month'] }}" {{ data['passport-issued-month'] }} type="number" pattern="[0-9]*">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expiry-date-month" name="expiry-date-month" value="{{ data['expiry-date-month'] }}" {{ data['expiry-date-month'] }} type="number" pattern="[0-9]*">
                 </div>
               </div>
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  <label class="govuk-label govuk-date-input__label" for="expiry-date-year">
             Year
           </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" value="{{ data['passport-issued-year'] }}" {{ data['passport-issued-year'] }} type="number" pattern="[0-9]*">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="expiry-date-year" name="expiry-date-year" value="{{ data['expiry-date-year'] }}" {{ data['expiry-date-year'] }} type="number" pattern="[0-9]*">
                 </div>
               </div>
             </div>
